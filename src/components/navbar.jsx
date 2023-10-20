@@ -8,7 +8,7 @@ const Navbar = () => {
             className="px-3 py-1 text-2xl font-bold text-orange-400 duration-500 rounded hover:scale-125"
             href=""
           >
-            Quizzz
+            Name
           </a>
           <a
             className="px-2 py-1 mx-1 duration-500 rounded bg-slate-800 text-slate-400 hover:scale-125"

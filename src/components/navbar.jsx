@@ -5,6 +5,8 @@ import Modal from "./modal";
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [show, setShow] = useState(false);
+  const [upVisible, setUpVisible] = useState(false);
+  const [inVisible, setInVisible] = useState(false);
   
   const toggleInput = () => {
     setIsExpanded(!isExpanded);
@@ -13,10 +15,10 @@ const Navbar = () => {
     <div>
       <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-slate-900">
         <a
-          className="px-3 py-1 text-2xl font-bold text-orange-400 duration-500 rounded hover:scale-125 font-['Monteserrat',sans-serif]"
+          className="px-6 py-1 text-xl font-bold text-orange-400 duration-500 rounded hover:scale-125 font-['Monteserrat',sans-serif]"
           href=""
         >
-          Meet Junction
+          Connect <br /> Junction
         </a>
         <div className="flex ">
           <button
@@ -53,6 +55,8 @@ const Navbar = () => {
           <button
             onClick={() => {
               setShow(!show);
+              setInVisible(true);
+              setUpVisible(false);
             }}
             className="px-5 py-1 mx-2 font-medium duration-500 border rounded text-slate-400 border-slate-500 hover:scale-110"
           >
@@ -61,6 +65,8 @@ const Navbar = () => {
           <button
             onClick={() => {
               setShow(!show);
+              setInVisible(false);
+              setUpVisible(true);
             }}
             className="px-5 py-1 mx-2 font-medium duration-500 border rounded bg-slate-700 text-slate-100 border-slate-500 hover:scale-110"
           >
@@ -68,7 +74,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-      <Modal show={show} setShow={setShow} />
+      <Modal show={show} setShow={setShow} upVisible={upVisible} setUpVisible={setUpVisible} inVisible={inVisible} setInVisible={setInVisible} />
     </div>
   );
 };

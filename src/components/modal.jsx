@@ -23,7 +23,6 @@ function Modal({
         className="absolute text-[12px] text-white right-[290px] top-[77px] cursor-pointer p-0"
         onClick={() => {
           setShow(!show);
-          setInVisible(false) || setUpVisible(false);
         }}
       >
         X

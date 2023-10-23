@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
 
 body {
   margin: 0;
@@ -17,3 +18,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* #modal {
+  transition: all 5s ease-out;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 80px;
+} */

@@ -27,7 +27,10 @@ function Modal({
       >
         X
       </h1>
-      <div className="bg-white w-[780px] h-[480px] rounded-xl m-auto left-0 right-0 top-20 flex absolute shadow-2xl">
+      <div
+        className="bg-white w-[780px] h-[480px] rounded-xl flex shadow-2xl absolute top-20 m-auto left-0 right-0"
+        id="modal"
+      >
         {inVisible && (
           <div
             className={"absolute left-0 w-1/2 h-full bg-white "}

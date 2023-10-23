@@ -25,10 +25,17 @@ const Navbar = () => {
     <div>
       <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-slate-900">
         <a
-          className="px-6 py-1 text-xl font-bold text-orange-400 duration-500 rounded hover:scale-125 font-['Monteserrat',sans-serif]"
+          className=" px-6 py-1 text-xl font-bold text-orange-400 duration-500 rounded hover:scale-125 font-['Monteserrat',sans-serif] flex relative"
           href=""
         >
-          Connect <br /> Junction
+          <img
+            src="https://connectcentre.ie/wp-content/themes/connect-centre/images/site-components/logo.png"
+            alt=""
+            className="h-10"
+          />
+          
+          {/* <sub className="text-[10px] absolute top-10 left-32">Junction</sub> */}
+          {/* <p className="p-0">Connect Junction</p> */}
         </a>
         <div className="flex ">
           <button

@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Modal from "./modal";
+import Findevents from "../pages/findevents";
+import Createevents from "../pages/createevents";
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -61,7 +63,7 @@ const Navbar = () => {
             className="px-5 py-1 mx-3 duration-500 rounded bg-slate-800 text-slate-400 hover:scale-125"
             href=""
           >
-            Find Events
+            <Findevents/>
           </a>
           <div onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown}>
             <button
@@ -69,7 +71,7 @@ const Navbar = () => {
               href=""
               id="create-event"
             >
-              Create Events
+              <Createevents/>
             </button>
             {isDropdownVisible && (
               <div

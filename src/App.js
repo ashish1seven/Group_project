@@ -5,7 +5,7 @@ import Home from './pages/home';
 
 function App() {
   return (
-    <div className="w-screen h-screen bg-slate-950">
+    <div className="w-screen h-screen">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>

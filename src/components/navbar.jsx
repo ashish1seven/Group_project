@@ -22,16 +22,16 @@ const Navbar = () => {
   };
   
   return (
-    <div>
-      <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-slate-900">
+    <>
+      <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-transparent">
         <a
-          className=" px-6 py-1 text-xl font-bold text-orange-400 duration-500 rounded hover:scale-125 font-['Monteserrat',sans-serif] flex relative"
+          className=" px-6 py-1 text-xl font-bold duration-500 hover:scale-110  flex relative"
           href=""
         >
           <img
             src="https://connectcentre.ie/wp-content/themes/connect-centre/images/site-components/logo.png"
             alt=""
-            className="h-10"
+            className="h-12"
           />
           
           {/* <sub className="text-[10px] absolute top-10 left-32">Junction</sub> */}
@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
         <div className="flex ">
           <button
-            className="px-2 py-1 mx-1 rounded bg-slate-800 text-slate-400 "
+            className="px-2 py-1 mx-1 rounded bg-transparent text-white "
             href=""
             onClick={toggleInput}
           >
@@ -47,7 +47,7 @@ const Navbar = () => {
           </button>
           {isExpanded && (
             <input
-              className="pl-1 ml-1 duration-500 ease-linear border-none rounded bg-slate-800 text-slate-400"
+              className="pl-1 ml-1 duration-500 ease-linear border-none rounded bg-gray-400/20 text-white outline-none"
               type="text"
               placeholder="Search..."
               autoFocus
@@ -58,14 +58,14 @@ const Navbar = () => {
 
         <div className="relative flex items-center">
           <a
-            className="px-5 py-1 mx-3 duration-500 rounded bg-slate-800 text-slate-400 hover:scale-125"
+            className="px-5 py-1 mx-3 duration-500 rounded text-white font-semibold hover:scale-110"
             href=""
           >
             Find Events
           </a>
-          <div onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown}>
+          <div onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown} className='relative'>
             <button
-              className="px-5 py-1 mx-3 duration-500 rounded bg-slate-800 text-slate-400 hover:scale-110"
+              className="px-5 py-1 mx-3 duration-500 rounded font-semibold text-white hover:scale-110"
               href=""
               id="create-event"
             >
@@ -88,7 +88,7 @@ const Navbar = () => {
               setInVisible(true);
               setUpVisible(false);
             }}
-            className="px-5 py-1 mx-2 font-medium duration-500 border rounded text-slate-400 border-slate-500 hover:scale-110"
+            className="px-5 py-1 mx-2 font-medium duration-500 border rounded text-white font-semibold hover:scale-110"
           >
             Log In
           </button>
@@ -99,11 +99,11 @@ const Navbar = () => {
               setInVisible(false);
               setUpVisible(true);
             }}
-            className="px-5 py-1 mx-2 font-medium duration-500 border rounded bg-slate-700 text-slate-100 border-slate-500 hover:scale-110"
+            className="px-5 py-1 mx-2 font-medium duration-500 border rounded bg-pink-600 text-slate-100 hover:scale-110"
           >
             Sign Up
           </button>
-          <button className="px-2 py-1 mx-1 duration-300 rounded hover:scale-110 bg-slate-800 text-slate-400">
+          <button className="px-2 py-1 mx-1 duration-300 rounded hover:scale-110 bg-transparent border text-white">
             <p className="origin-center rotate-[-45deg]">
               <i className=" fi fi-ss-moon"></i>
             </p>
@@ -119,7 +119,7 @@ const Navbar = () => {
         inVisible={inVisible}
         setInVisible={setInVisible}
       />
-    </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "./modal";
 import { Link } from "react-router-dom";
+import Logo from "../Images/logo.png"
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -26,17 +27,17 @@ const Navbar = () => {
     <>
       <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-transparent">
         <Link
-          className=" px-6 py-1 text-lg font-bold duration-500 hover:scale-110  flex relative"
+          className="relative flex px-6 py-1 text-lg font-bold duration-500 hover:scale-110"
         >
           <img
-            src="https://connectcentre.ie/wp-content/themes/connect-centre/images/site-components/logo.png"
+            src={Logo}
             alt=""
             className="h-12"
           />
         </Link>
         <div className="flex ">
           <button
-            className="px-2 py-1 mx-1 rounded bg-transparent text-white "
+            className="px-2 py-1 mx-1 text-white bg-transparent rounded "
             href=""
             onClick={toggleInput}
           >
@@ -44,7 +45,7 @@ const Navbar = () => {
           </button>
           {isExpanded && (
             <input
-              className="pl-1 ml-1 duration-500 ease-linear border-none rounded bg-gray-400/20 text-white outline-none"
+              className="pl-1 ml-1 text-white duration-500 ease-linear border-none rounded outline-none bg-gray-400/20"
               type="text"
               placeholder="Search Events"
               autoFocus
@@ -55,14 +56,14 @@ const Navbar = () => {
 
         <div className="relative flex items-center">
           <Link
-            className="px-5 py-1 mx-3 duration-500 rounded text-white font-semibold hover:scale-110"
+            className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110"
              to={`/find`}
           >
             Find Events
           </Link>
           <div onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown} className='relative'>
             <button
-              className="px-5 py-1 mx-3 duration-500 rounded font-semibold text-white hover:scale-110"
+              className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110"
               href=""
               id="create-event"
             >
@@ -85,7 +86,7 @@ const Navbar = () => {
               setInVisible(true);
               setUpVisible(false);
             }}
-            className="px-5 py-1 mx-2 duration-500 border rounded text-white font-semibold hover:scale-110"
+            className="px-5 py-1 mx-2 font-semibold text-white duration-500 border rounded hover:scale-110"
           >
             Log In
           </button>
@@ -96,11 +97,11 @@ const Navbar = () => {
               setInVisible(false);
               setUpVisible(true);
             }}
-            className="px-5 py-1 mx-2 font-medium duration-500 border rounded bg-pink-600 text-slate-100 hover:scale-110"
+            className="px-5 py-1 mx-2 font-medium duration-500 bg-pink-600 border rounded text-slate-100 hover:scale-110"
           >
             Sign Up
           </button>
-          <button className="px-2 py-1 mx-1 duration-300 rounded hover:scale-110 bg-transparent border text-white">
+          <button className="px-2 py-1 mx-1 text-white duration-300 bg-transparent border rounded hover:scale-110">
             <p className="origin-center rotate-[-45deg]">
               <i className=" fi fi-ss-moon"></i>
             </p>

@@ -25,16 +25,15 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-transparent">
-        <a
+        <Link
           className=" px-6 py-1 text-lg font-bold duration-500 hover:scale-110  flex relative"
-          href=""
         >
           <img
             src="https://connectcentre.ie/wp-content/themes/connect-centre/images/site-components/logo.png"
             alt=""
             className="h-12"
           />
-        </a>
+        </Link>
         <div className="flex ">
           <button
             className="px-2 py-1 mx-1 rounded bg-transparent text-white "
@@ -75,10 +74,8 @@ const Navbar = () => {
               <div
                 className={`absolute z-10 flex flex-col w-32 h-16 px-3 py-1 border rounded shadow-lg justify-evenly left-4 top-8`}
               >
-                <a href="#" className="">
-                  Local Event
-                </a>
-                <a href="#">E-Event</a>
+                <Link to={`#`}>Local Event</Link>
+                <Link to={`#`}>E-Event</Link>
               </div>
             )}
           </div>

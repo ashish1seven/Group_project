@@ -14,7 +14,7 @@ export default function Categories() {
   const [swiperRef, setSwiperRef] = useState(null);
 
   return (
-    <div className="h-52 w-full flex items-center">
+    <div className="h-52 w-full flex items-center mb-10">
         <Swiper
       onSwiper={setSwiperRef}
       slidesPerView={5}

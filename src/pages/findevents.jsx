@@ -1,16 +1,17 @@
 import React from "react";
-import bgImg from "../Images/header-back.jpeg";
+import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
 
 const Findevents = () => {
   return (
     <>
       <div
-        className="flex flex-col items-center justify-center p-24 "
+        className="flex flex-col items-center justify-center h-[90vh] w-screen "
         style={{
           backgroundImage: `url(${bgImg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundPosition: "top",
+          backgroundSize: "contain",
           backgroundAttachment: "fixed",
+          backgroundRepeat:"no-repeat"
         }}
       >
         <h1 className="pb-10 text-7xl text-center text-white font-semibold font-['Monteserrat',sans-serif]">

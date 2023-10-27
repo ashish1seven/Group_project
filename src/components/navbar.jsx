@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-transparent">
         <Link
-          className=" px-6 py-1 text-xl font-bold duration-500 hover:scale-110  flex relative"
+          className=" px-6 py-1 text-lg font-bold duration-500 hover:scale-110  flex relative"
         >
           <img
             src="https://connectcentre.ie/wp-content/themes/connect-centre/images/site-components/logo.png"

@@ -1,16 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 
+import Navbar from "../components/navbar";
 
 const Findevents = () => {
-    return (
-        <div>
-            <Link to={`find/`}>
-                
-                <h1 className='text-5xl'>Find Events</h1>
-            </Link>
-        </div>
-    );
-}
+  return (
+    <>
+      <div>
+        <Navbar />
+          </div>
+          <div><h1 className="text-5xl relative">Find Events</h1></div>
+      
+    </>
+  );
+};
 
 export default Findevents;

@@ -5,7 +5,7 @@ import bgImg from '../Images/header-back.jpeg';
 const Home = () => {
     return (
         <>
-        <div className='h-[90%] w-screen' style={{backgroundImage:`url(${bgImg})`, backgroundPosition:'center',backgroundSize:'cover'}}>
+        <div className='h-[90vh] w-screen' style={{backgroundImage:`url(${bgImg})`, backgroundPosition:'center',backgroundSize:'cover', backgroundAttachment:'fixed'}}>
             <Navbar/>
         </div>
         <div className='h-full mt-10'>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import bgImg from "../Images/pexels-wendy-wei-1306791.jpg";
 import Modal from "../components/modal";
 

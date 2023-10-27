@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Modal from "./modal";
-import Findevents from "../pages/findevents";
-import Createevents from "../pages/createevents";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -35,9 +34,6 @@ const Navbar = () => {
             alt=""
             className="h-12"
           />
-          
-          {/* <sub className="text-[10px] absolute top-10 left-32">Junction</sub> */}
-          {/* <p className="p-0">Connect Junction</p> */}
         </a>
         <div className="flex ">
           <button
@@ -51,7 +47,7 @@ const Navbar = () => {
             <input
               className="pl-1 ml-1 duration-500 ease-linear border-none rounded bg-gray-400/20 text-white outline-none"
               type="text"
-              placeholder="Search..."
+              placeholder="Search Events"
               autoFocus
               onBlur={toggleInput}
             />
@@ -59,23 +55,25 @@ const Navbar = () => {
         </div>
 
         <div className="relative flex items-center">
-          <a
+          <Link
             className="px-5 py-1 mx-3 duration-500 rounded text-white font-semibold hover:scale-110"
-            href=""
+             to={`/find`}
           >
-            <Findevents/>
-          </a>
+            Find Events
+          </Link>
           <div onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown} className='relative'>
             <button
               className="px-5 py-1 mx-3 duration-500 rounded font-semibold text-white hover:scale-110"
               href=""
               id="create-event"
             >
-              <Createevents/>
+              <Link to={`/create`}>
+                Create Event
+                </Link>
             </button>
             {isDropdownVisible && (
               <div
-                className={`absolute z-10 flex flex-col w-32 h-16 px-3 py-1 border rounded shadow-lg justify-evenly left-40 top-9`}
+                className={`absolute z-10 flex flex-col w-32 h-16 px-3 py-1 border rounded shadow-lg justify-evenly left-4 top-8`}
               >
                 <a href="#" className="">
                   Local Event
@@ -90,7 +88,7 @@ const Navbar = () => {
               setInVisible(true);
               setUpVisible(false);
             }}
-            className="px-5 py-1 mx-2 font-medium duration-500 border rounded text-white font-semibold hover:scale-110"
+            className="px-5 py-1 mx-2 duration-500 border rounded text-white font-semibold hover:scale-110"
           >
             Log In
           </button>

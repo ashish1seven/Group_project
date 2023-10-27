@@ -7,7 +7,7 @@ import Createevents from './pages/createevents';
 
 function App() {
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />

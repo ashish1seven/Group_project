@@ -1,6 +1,6 @@
 import React from "react";
 import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
-
+import Footer from "../components/Footer";
 const Findevents = () => {
   return (
     <>
@@ -59,6 +59,11 @@ const Findevents = () => {
         >
           SEARCH
         </button>
+      </div>
+      <div>
+      <div>
+      <Footer />
+    </div>
       </div>
     </>
   );

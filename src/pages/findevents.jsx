@@ -45,7 +45,7 @@ const Findevents = () => {
         <div className="overflow-hidden border border-black rounded-3xl">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search City"
             className="h-12 pl-3 bg-transparent w-80 outline-0"
             id="city"
             value={cityInput}

@@ -5,86 +5,70 @@ const Findevents = () => {
   const [city, setCity] = useState("");
   const [category, setCategory] = useState("");
 
-  const handleCityChange = (event) => {
+  const cityChange = (event) => {
     setCity(event.target.value);
   };
-  
+
   const categoryChange = (event) => {
     setCategory(event.target.value);
-  }
+  };
   return (
     <>
-      <div
-        className="flex flex-col items-center justify-center h-[90vh] w-screen "
-        style={{
-          backgroundImage: `url(${bgImg})`,
-          backgroundPosition: "top",
-          backgroundSize: "contain",
-          backgroundAttachment: "fixed",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <h1 className="pb-10 text-7xl text-center text-white font-semibold font-['Monteserrat',sans-serif]">
-          Discover
-        </h1>
-        <div className="overflow-hidden border border-black rounded-3xl">
-          <input
-            type="text"
-            placeholder="Search"
-            className="h-12 pl-3 bg-transparent w-80 outline-0"
-            id="city"
-            value={city}
-            onChange={handleCityChange}
-          />
-          <select
-            name=""
-            id="category"
-            value={category}
-            onChange={categoryChange}
-            className="h-12 pl-3 mr-3 font-medium text-gray-400 bg-transparent border-l-2 border-gray-800 w-80 outline-0"
-          >
-            <option className="text-black">All Categories</option>
-            <option className="text-black">Dancing</option>
-            <option className="text-black">Playing</option>
-          </select>
+      <div className="flex w-screen justify-between h-screen">
+        <div className="flex flex-col justify-center p-12 ">
+          <h1 className="text-5xl">
+            Events in{" "}
+            <span>
+              <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
+            </span>
+          </h1>
         </div>
-        {/* <div className="mt-4 overflow-hidden bg-transparent border border-black rounded-3xl">
-          <input
-            type="text"
-            placeholder="Location or ZIP-code"
-            className="h-12 pl-3 bg-transparent w-80 outline-0"
-          />
-          <select
-            name=""
-            id=""
-            className="h-12 pl-3 mr-3 font-medium text-gray-400 bg-transparent border-l-2 border-gray-800 w-80 outline-0"
-          >
-            <option className="font-medium text-black">
-              Within any distance
-            </option>
-            <option className="font-medium text-black">Within 10 miles</option>
-            <option className="font-medium text-black">Within 25 miles</option>
-            <option className="font-medium text-black">Within 50 miles</option>
-            <option className="font-medium text-black">Within 100 miles</option>
-          </select>
-        </div> */}
-        <button
-          type="button"
-          onClick={() => console.log("Clicked", city, category)}
-          className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-black"
+        <div
+          className="flex flex-col items-center justify-center h-[90%] w-[66%] "
+          style={{
+            backgroundImage: `url(${bgImg})`,
+            backgroundPosition: "top",
+            backgroundSize: "contain",
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+          }}
         >
-          SEARCH
-        </button>
+          <h1 className="pb-10 text-7xl text-center text-white font-semibold font-['Monteserrat',sans-serif]">
+            Discover
+          </h1>
+          <div className="overflow-hidden border border-black rounded-3xl">
+            <input
+              type="text"
+              placeholder="Search"
+              className="h-12 pl-3 bg-transparent w-80 outline-0"
+              id="city"
+              value={city}
+              onChange={cityChange}
+            />
+            <select
+              name=""
+              id="category"
+              value={category}
+              onChange={categoryChange}
+              className="h-12 pl-3 mr-3 font-medium text-gray-400 bg-transparent border-l-2 border-gray-800 w-80 outline-0"
+            >
+              <option className="text-black">All Categories</option>
+              <option className="text-black">Dancing</option>
+              <option className="text-black">Playing</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            onClick={() => console.log("Clicked", city, category)}
+            className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-black"
+          >
+            SEARCH
+          </button>
+        </div>
       </div>
-      <div className="flex flex-col items-start justify-center p-10">
-        <h1 className="text-5xl">
-          Events in{" "}
-          <span>
-            <u>{city}</u>
-          </span>
-        </h1>
-        <h1 className="mt-3 text-5xl ">
-          For{" "}
+      <div>
+        <h1 className="mt-9 text-5xl ">
+          Popular for{" "}
           <span>
             <u>{category}</u>
           </span>

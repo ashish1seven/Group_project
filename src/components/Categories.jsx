@@ -7,87 +7,103 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import arts from '../Images/id-1.png'
+import car from '../Images/id-2.png'
+import edu from '../Images/id-3.png'
+import fitness from '../Images/id-4.png'
+import food from '../Images/id-5.png'
+import hobbies from '../Images/id-6.png'
+import movie from '../Images/id-7.png'
+import music from '../Images/id-8.png'
+import adventure from '../Images/id-9.png'
+import family from '../Images/id-10.png'
+import pet from '../Images/id-11.png'
+import photo from '../Images/id-12.png'
+import religion from '../Images/id-13.png'
+import sport from '../Images/id-14.png'
+import tech from '../Images/id-15.png'
+import more from '../Images/id-16.png'
 
 const categories = [
   {
     id : 1,
     name: 'Arts and Hobbies',
-    img: ''
+    img: arts
   },
   {
     id : 2,
     name: 'Cars & Motorcycles',
-    img: ''
+    img: car
   },
   {
     id : 3,
     name: 'Education and Training',
-    img: ''
+    img: edu
   },
   {
     id:4,
     name:'Fitness and Wellness',
-    img:''
+    img: fitness
   },
   {
     id:5,
     name:'Food & Drink',
-    img:''
+    img: food
   },
   {
     id:6,
     name:'Hobbies & Crafts',
-    img:''
+    img: hobbies
   },
   {
     id:7,
     name:'Movies',
-    img:''
+    img: movie
   },
   {
     id:8,
     name:'Music',
-    img:''
+    img: music
   },
   {
     id:9,
     name:'Outdoors & Adventure',
-    img:''
+    img: adventure
   },
   {
     id:10,
     name:'Parents & Family',
-    img:''
+    img: family
   },
   {
     id:11,
     name:'Pets & Animals',
-    img:''
+    img: pet
   },
   {
     id:12,
     name:'Photography',
-    img:''
+    img: photo
   },
   {
     id:13,
     name:'Religion & Beliefs',
-    img:''
+    img: religion
   },
   {
     id:14,
     name:'Sports & Recreation',
-    img:''
+    img: sport
   },
   {
     id:15,
     name:'Technology',
-    img:''
+    img: tech
   },
   {
     id:16,
     name:'& More!',
-    img:''
+    img: more
   },
   
 ]
@@ -99,17 +115,17 @@ export default function Categories() {
       slidesPerView={4}
       navigation={true}
       rewind = {true}
-      className=" w-full my-8  text-[#FF0079]"
+      className=" h-52 my-8  text-[#FF0079]"
       
     >
       {categories.map((item)=>(
        <div className="h-56 w-full">
          <SwiperSlide key={item.id}>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
+          <div className="h-44 w-58 shadow-2xl p-4 justify-center flex flex-col rounded-lg items-center  ">
          <img
              src={item.img}
              alt=""
-             className="h-32 w-32"
+             className="h-24 mb-3"
            />
             <h2 className="text-lg font-semibold">{item.name}</h2>
           </div>

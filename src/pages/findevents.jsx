@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
 import Footer from "../components/Footer";
 import Navbar from "../components/navbar";
+import Searchlist from "../components/searchlist";
 const Findevents = () => {
   const [city, setCity] = useState("Bangalore");
   const [category, setCategory] = useState("");
@@ -92,7 +93,9 @@ const Findevents = () => {
           </span>
         </p>
       </div>
-
+      <div>
+        <Searchlist />
+      </div>
       <div>
         <Footer />
       </div>

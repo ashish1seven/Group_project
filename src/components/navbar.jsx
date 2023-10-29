@@ -25,7 +25,7 @@ const Navbar = () => {
   
   return (
     <>
-      <nav className="fixed flex items-center justify-between w-screen h-16 px-10 text-white bg-transparent">
+      <nav className=" flex items-center justify-between w-screen h-16 px-10 text-white bg-transparent">
         <Link
           className="relative flex px-6 py-1 text-lg font-bold duration-500 hover:scale-110"
         >

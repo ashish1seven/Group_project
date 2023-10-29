@@ -121,7 +121,7 @@ export default function Categories() {
       {categories.map((item)=>(
        <div className="h-56 w-full">
          <SwiperSlide key={item.id}>
-          <div className="h-44 w-58 shadow-2xl p-4 justify-center flex flex-col rounded-lg items-center  ">
+          <div className="h-44 w-58 shadow-2xl p-4 justify-center flex flex-col rounded-lg items-center bg-gray-300/20 ">
          <img
              src={item.img}
              alt=""

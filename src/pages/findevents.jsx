@@ -44,11 +44,11 @@ const Findevents = () => {
           <h1 className="mb-10 text-7xl text-center text-white font-semibold font-['Monteserrat',sans-serif]">
             Discover
           </h1>
-          <div className="overflow-hidden w-80 border border-white rounded-3xl">
+          <div className="overflow-hidden border border-white w-80 rounded-3xl">
             <input
               type="text"
               placeholder="Search City"
-              className="h-12 pl-3 text-white  w-80 outline-0 placeholder:text-white bg-gray-400/20"
+              className="h-12 pl-3 text-white w-80 outline-0 placeholder:text-white bg-gray-400/20"
               id="city"
               value={cityInput}
               onChange={cityChange}
@@ -76,7 +76,7 @@ const Findevents = () => {
       </div>
 {/* <<<<<<< HEAD */}
       <div>
-        <h1 className="mt-9 text-5xl ">
+        <h1 className="text-5xl mt-9 ">
           Popular for{" "}
           <span>
             <u>{category}</u>
@@ -93,7 +93,8 @@ const Findevents = () => {
           <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
         </span>
       </p>
-      <div>
+        <div>
+          
       <Footer />
     </div>
  </div>

@@ -1,191 +1,139 @@
-import React, { useRef, useState } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Navigation, Pagination} from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import arts from '../Images/id-1.png'
+import car from '../Images/id-2.png'
+import edu from '../Images/id-3.png'
+import fitness from '../Images/id-4.png'
+import food from '../Images/id-5.png'
+import hobbies from '../Images/id-6.png'
+import movie from '../Images/id-7.png'
+import music from '../Images/id-8.png'
+import adventure from '../Images/id-9.png'
+import family from '../Images/id-10.png'
+import pet from '../Images/id-11.png'
+import photo from '../Images/id-12.png'
+import religion from '../Images/id-13.png'
+import sport from '../Images/id-14.png'
+import tech from '../Images/id-15.png'
+import more from '../Images/id-16.png'
 
-// import required modules
-import { Pagination, Navigation } from "swiper/modules";
-
+const categories = [
+  {
+    id : 1,
+    name: 'Arts and Hobbies',
+    img: arts
+  },
+  {
+    id : 2,
+    name: 'Cars & Motorcycles',
+    img: car
+  },
+  {
+    id : 3,
+    name: 'Education and Training',
+    img: edu
+  },
+  {
+    id:4,
+    name:'Fitness and Wellness',
+    img: fitness
+  },
+  {
+    id:5,
+    name:'Food & Drink',
+    img: food
+  },
+  {
+    id:6,
+    name:'Hobbies & Crafts',
+    img: hobbies
+  },
+  {
+    id:7,
+    name:'Movies',
+    img: movie
+  },
+  {
+    id:8,
+    name:'Music',
+    img: music
+  },
+  {
+    id:9,
+    name:'Outdoors & Adventure',
+    img: adventure
+  },
+  {
+    id:10,
+    name:'Parents & Family',
+    img: family
+  },
+  {
+    id:11,
+    name:'Pets & Animals',
+    img: pet
+  },
+  {
+    id:12,
+    name:'Photography',
+    img: photo
+  },
+  {
+    id:13,
+    name:'Religion & Beliefs',
+    img: religion
+  },
+  {
+    id:14,
+    name:'Sports & Recreation',
+    img: sport
+  },
+  {
+    id:15,
+    name:'Technology',
+    img: tech
+  },
+  {
+    id:16,
+    name:'& More!',
+    img: more
+  },
+  
+]
 export default function Categories() {
-  const [swiperRef, setSwiperRef] = useState(null);
-
   return (
-    <div className="h-52 w-full flex items-center">
-        <Swiper
-      onSwiper={setSwiperRef}
-      slidesPerView={5}
-      centeredSlides={false}
-      spaceBetween={10}
+    <Swiper
+      modules={[Navigation]}
+      spaceBetween={50}
+      slidesPerView={4}
       navigation={true}
-      modules={[Pagination, Navigation]}
-      className="mt-10 h-48  text-[#FF0079]"
+      rewind = {true}
+      className=" h-52 my-8  text-[#FF0079]"
+      
     >
-   
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl p-4 m-auto flex flex-col rounded-lg items-center">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Arts and Hobbies</h2>
+      {categories.map((item)=>(
+       <div className="h-56 w-full">
+         <SwiperSlide key={item.id}>
+          <div className="h-44 w-58 shadow-2xl p-4 justify-center flex flex-col rounded-lg items-center  ">
+         <img
+             src={item.img}
+             alt=""
+             className="h-24 mb-3"
+           />
+            <h2 className="text-lg font-semibold">{item.name}</h2>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Cars & Motorcycles</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Education and Training</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Fitness and Wellness</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Food & Drink</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Hobbies & Crafts</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Movies</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Music</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Outdoors & Adventure</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Parents & Family</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Pets & Animals</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Photography</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Religion & Beliefs</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Sports & Recreation</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">Technology</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-44 w-58 shadow-2xl  p-4 flex flex-col rounded-lg items-center  ">
-            <img
-              src="https://www.mastersoftwaresolutions.com/wp-content/uploads/2014/08/bnr-1.png"
-              alt=""
-              className="h-32 w-32"
-            />
-            <h2 className="text-lg font-semibold">and more!</h2>
-          </div>
-        </SwiperSlide>
+       </div>
+      )
+      )}
     </Swiper>
-    </div>
   );
-}
+  }
+

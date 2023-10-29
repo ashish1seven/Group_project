@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
-import Searchlist from "../components/searchlist";
 
 const Findevents = () => {
   const [city, setCity] = useState("Bangalore");
-  // const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("");
   const [cityInput, setCityInput] = useState("");
   // const [categoryInput, setCategoryInput] = useState("");
 
@@ -73,13 +72,25 @@ const Findevents = () => {
           SEARCH
         </button>
       </div>
+{/* <<<<<<< HEAD */}
+      <div>
+        <h1 className="text-5xl mt-9 ">
+          Popular for{" "}
+          <span>
+            <u>{category}</u>
+          </span>
+        </h1>
+      </div>
+      <div>
+     
+      </div>
+
       <p className="m-6 text-3xl ml-44">
         Events in{" "}
         <span className="text-6xl">
           <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
         </span>
       </p>
-      <Searchlist/>
     </>
   );
 };

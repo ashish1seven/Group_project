@@ -29,8 +29,8 @@ const Findevents = () => {
   };
 
   return (
-    <> 
-    <div
+    <>
+      <div
         className="h-[85vh] w-screen"
         style={{
           backgroundImage: `url(${bgImg})`,
@@ -40,7 +40,7 @@ const Findevents = () => {
         }}
       >
         <Navbar />
-        <div className="mt-40 px-[150px] flex flex-col items-center ">
+        <div className="mt-40 mb-10 px-[150px] flex flex-col items-center ">
           <h1 className="mb-10 text-7xl text-center text-white font-semibold font-['Monteserrat',sans-serif]">
             Discover
           </h1>
@@ -65,40 +65,38 @@ const Findevents = () => {
             <option className="text-black">Dancing</option>
             <option className="text-black">Playing</option>
           </select> */}
+          </div>
+          <button
+            type="button"
+            onClick={handleSearch}
+            className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-white"
+          >
+            SEARCH
+          </button>
         </div>
-        <button
-          type="button"
-          onClick={handleSearch}
-          className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-black"
-        >
-          SEARCH
-        </button>
       </div>
-{/* <<<<<<< HEAD */}
-      <div>
+      {/* <<<<<<< HEAD */}
+      {/* <div>
         <h1 className="mt-9 text-5xl ">
           Popular for{" "}
           <span>
             <u>{category}</u>
           </span>
         </h1>
-      </div>
-      <div>
-     
+      </div> */}
+      <div className="">
+        <p className="m-6 text-3xl ml-44">
+          Events in{" "}
+          <span className="text-6xl">
+            <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
+          </span>
+        </p>
       </div>
 
-      <p className="m-6 text-3xl ml-44">
-        Events in{" "}
-        <span className="text-6xl">
-          <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
-        </span>
-      </p>
       <div>
-      <Footer />
-    </div>
- </div>
+        <Footer />
+      </div>
     </>
-      
   );
 };
 

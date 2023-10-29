@@ -26,7 +26,7 @@ const Home = () => {
             <p className="text-[28px] mb-5 font-normal">We provide the platform. Just Connect</p>
             </div>
             <div className="flex justify-center">
-            <Link className="border-2 border-[#FF0079] mr-5 w-[150px] text-center p-2 rounded-md font-bold bg-[#FF0079] hover:bg-[#FF0079]/80">
+            <Link className="border-2 border-[#FF0079] mr-5 w-[150px] text-center p-2 rounded-md font-bold bg-[#FF0079] hover:bg-[#FF0079]/80" to={'/find'}>
             <button>Discover</button>
           </Link>
             <Link className="border-2 p-2 rounded-md text-center w-[150px] font-bold hover:bg-white hover:text-black">

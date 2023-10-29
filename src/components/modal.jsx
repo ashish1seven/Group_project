@@ -15,7 +15,7 @@ function Modal({
   return (
     <div
       className={
-        "w-screen h-screen bg-[#ffffff2a] absolute top-0 left-0 font-['Monteserrat',sans-serif] " +
+        "w-screen h-screen bg-[#ffffff2a] absolute top-0 left-0 font-['Monteserrat',sans-serif] z-10 " +
         visible
       }
     >

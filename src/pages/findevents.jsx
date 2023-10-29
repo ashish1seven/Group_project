@@ -48,7 +48,7 @@ const Findevents = () => {
             <input
               type="text"
               placeholder="Search City"
-              className="h-12 pl-3 text-white   w-80 outline-0 placeholder:text-white bg-gray-400/20"
+              className="h-12 pl-3 text-white  w-80 outline-0 placeholder:text-white bg-gray-400/20"
               id="city"
               value={cityInput}
               onChange={cityChange}

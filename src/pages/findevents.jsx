@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
 import Footer from "../components/Footer";
-import Navbar from "../components/navbar";
+import Navbar from "../components/NavBar";
 const Findevents = () => {
   const [city, setCity] = useState("Bangalore");
   const [category, setCategory] = useState("");
@@ -29,8 +29,8 @@ const Findevents = () => {
   };
 
   return (
-    <>
-      <div
+    <> 
+    <div
         className="h-[85vh] w-screen"
         style={{
           backgroundImage: `url(${bgImg})`,
@@ -65,37 +65,40 @@ const Findevents = () => {
             <option className="text-black">Dancing</option>
             <option className="text-black">Playing</option>
           </select> */}
-          </div>
-          <button
-            type="button"
-            onClick={handleSearch}
-            className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-white"
-          >
-            SEARCH
-          </button>
         </div>
+        <button
+          type="button"
+          onClick={handleSearch}
+          className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-black"
+        >
+          SEARCH
+        </button>
       </div>
-
-      {/* <div>
+{/* <<<<<<< HEAD */}
+      <div>
         <h1 className="mt-9 text-5xl ">
           Popular for{" "}
           <span>
             <u>{category}</u>
           </span>
         </h1>
-      </div> */}
+      </div>
       <div>
+     
+      </div>
+
       <p className="m-6 text-3xl ml-44">
         Events in{" "}
         <span className="text-6xl">
           <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
         </span>
       </p>
-      </div>
       <div>
-        <Footer />
-      </div>
+      <Footer />
+    </div>
+ </div>
     </>
+      
   );
 };
 

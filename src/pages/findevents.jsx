@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
+import Searchlist from "../components/searchlist";
 
 const Findevents = () => {
   const [city, setCity] = useState("Bangalore");
@@ -78,6 +79,7 @@ const Findevents = () => {
           <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
         </span>
       </p>
+      <Searchlist/>
     </>
   );
 };

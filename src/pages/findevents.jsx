@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/navbar";
 const Findevents = () => {
   const [city, setCity] = useState("Bangalore");
-  const [category, setCategory] = useState("");
+  // const [category, setCategory] = useState("");
   const [cityInput, setCityInput] = useState("");
   // const [categoryInput, setCategoryInput] = useState("");
 

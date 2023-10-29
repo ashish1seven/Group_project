@@ -41,7 +41,7 @@ const Navbar = () => {
             href=""
             onClick={toggleInput}
           >
-            <i class="fi fi-br-search"></i>
+            <i className="fi fi-br-search"></i>
           </button>
           {isExpanded && (
             <input
@@ -59,7 +59,7 @@ const Navbar = () => {
             className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110"
              to={`/find`}
           >
-            Find Events
+            Discover
           </Link>
           <div onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown} className='relative'>
             <button

@@ -76,22 +76,22 @@ const Findevents = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <h1 className="mt-9 text-5xl ">
           Popular for{" "}
           <span>
             <u>{category}</u>
           </span>
         </h1>
-      </div>
-      <div></div>
-
+      </div> */}
+      <div>
       <p className="m-6 text-3xl ml-44">
         Events in{" "}
         <span className="text-6xl">
           <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
         </span>
       </p>
+      </div>
       <div>
         <Footer />
       </div>

@@ -29,8 +29,8 @@ const Findevents = () => {
   };
 
   return (
-    <> 
-    <div
+    <>
+      <div
         className="h-[85vh] w-screen"
         style={{
           backgroundImage: `url(${bgImg})`,
@@ -40,7 +40,7 @@ const Findevents = () => {
         }}
       >
         <Navbar />
-        <div className="mt-40 px-[150px] flex flex-col items-center ">
+        <div className="mt-40 mb-10 px-[150px] flex flex-col items-center ">
           <h1 className="mb-10 text-7xl text-center text-white font-semibold font-['Monteserrat',sans-serif]">
             Discover
           </h1>
@@ -65,17 +65,21 @@ const Findevents = () => {
             <option className="text-black">Dancing</option>
             <option className="text-black">Playing</option>
           </select> */}
+          </div>
+          <button
+            type="button"
+            onClick={handleSearch}
+            className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-white"
+          >
+            SEARCH
+          </button>
         </div>
-        <button
-          type="button"
-          onClick={handleSearch}
-          className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-black"
-        >
-          SEARCH
-        </button>
       </div>
 {/* <<<<<<< HEAD */}
       <div>
+        <h1 className="text-5xl mt-9 ">
+      {/* <<<<<<< HEAD */}
+      {/* <div>
         <h1 className="text-5xl mt-9 ">
           Popular for{" "}
           <span>
@@ -93,13 +97,11 @@ const Findevents = () => {
           <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
         </span>
       </p>
-        <div>
-          
+      <div>
       <Footer />
     </div>
  </div>
     </>
-      
   );
 };
 

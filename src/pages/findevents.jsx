@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
 import Footer from "../components/Footer";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/navbar";
 const Findevents = () => {
   const [city, setCity] = useState("Bangalore");
   const [category, setCategory] = useState("");

@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/navbar";
 const Findevents = () => {
   const [city, setCity] = useState("Bangalore");
-  // const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("");
   const [cityInput, setCityInput] = useState("");
   // const [categoryInput, setCategoryInput] = useState("");
 
@@ -44,11 +44,11 @@ const Findevents = () => {
           <h1 className="mb-10 text-7xl text-center text-white font-semibold font-['Monteserrat',sans-serif]">
             Discover
           </h1>
-          <div className="overflow-hidden border border-white w-80 rounded-3xl">
+          <div className="overflow-hidden w-80 border border-white rounded-3xl">
             <input
               type="text"
               placeholder="Search City"
-              className="h-12 pl-3 text-white w-80 outline-0 placeholder:text-white bg-gray-400/20"
+              className="h-12 pl-3 text-white  w-80 outline-0 placeholder:text-white bg-gray-400/20"
               id="city"
               value={cityInput}
               onChange={cityChange}
@@ -75,32 +75,27 @@ const Findevents = () => {
           </button>
         </div>
       </div>
-{/* <<<<<<< HEAD */}
-      <div>
-        <h1 className="text-5xl mt-9 ">
       {/* <<<<<<< HEAD */}
       {/* <div>
-        <h1 className="text-5xl mt-9 ">
+        <h1 className="mt-9 text-5xl ">
           Popular for{" "}
           <span>
             <u>{category}</u>
           </span>
         </h1>
-      </div>
-      <div>
-     
+      </div> */}
+      <div className="">
+        <p className="m-6 text-3xl ml-44">
+          Events in{" "}
+          <span className="text-6xl">
+            <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
+          </span>
+        </p>
       </div>
 
-      <p className="m-6 text-3xl ml-44">
-        Events in{" "}
-        <span className="text-6xl">
-          <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
-        </span>
-      </p>
       <div>
-      <Footer />
-    </div>
- </div>
+        <Footer />
+      </div>
     </>
   );
 };

@@ -20,10 +20,13 @@ const Createevents = () => {
         }}
       >
         <Navbar />
-        <h1 className="mt-12 text-white text-7xl">
+        <h1 className="mt-12 text-white text-7xl font-['Monteserrat',sans-serif]">
           The Organizers Platform
         </h1>
-        <h2 className="mt-16 text-5xl text-white"> Plan, Create, and Organize</h2>
+        <h2 className="mt-16 text-5xl text-white">
+          {" "}
+          Plan, Create, and Organize
+        </h2>
         <button
           onClick={() => {
             setShow(!show);

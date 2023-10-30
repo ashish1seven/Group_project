@@ -89,12 +89,12 @@ const Findevents = () => {
         </h1>
       </div> */}
       <div className="">
-        <p className="my-6 text-3xl text-center">
+        <p className="my-6 text-3xl text-[#333333]/60 text-center font-">
           Events in{" "}
-          <span className="text-6xl">
-            <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
+          <span className="text-6xl text-pink-600">
+            {city.charAt(0).toUpperCase() + city.slice(1)}
           </span>
-        </p>
+        </p> 
       </div>
       <div>
         <Searchlist  />

@@ -91,7 +91,7 @@ const Findevents = () => {
       <div className="">
         <p className="my-6 text-3xl text-center">
           Events in{" "}
-          <span className="text-6xl">
+          <span className="text-5xl">
             <u>{city.charAt(0).toUpperCase() + city.slice(1)}</u>
           </span>
         </p>

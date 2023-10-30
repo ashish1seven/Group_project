@@ -3,8 +3,10 @@ import bgImg from "../Images/pexels-ronê-ferreira-2735037.jpg";
 import Footer from "../components/Footer";
 import Navbar from "../components/navbar";
 import Searchlist from "../components/searchlist";
+
+
 const Findevents = () => {
-  const [city, setCity] = useState("Bangalore");
+  const [city, setCity] = useState("bangalore");
   // const [category, setCategory] = useState("");
   const [cityInput, setCityInput] = useState("");
   // const [categoryInput, setCategoryInput] = useState("");
@@ -20,7 +22,7 @@ const Findevents = () => {
   const handleSearch = () => {
     setCity(cityInput);
     setCityInput("");
-    
+
     // setCategory(categoryInput);
   };
 
@@ -71,10 +73,8 @@ const Findevents = () => {
           <button
             type="button"
             onClick={handleSearch}
-              
             className="px-10 py-2 border mt-4 rounded-3xl font-semibold font-['Monteserrat',sans-serif] text-white border-white"
           >
-            
             SEARCH
           </button>
         </div>
@@ -97,10 +97,9 @@ const Findevents = () => {
         </p>
       </div>
       <div>
-        <Searchlist  />
-        
+        <Searchlist city={city} />
       </div>
-      
+
       <div>
         <Footer />
       </div>

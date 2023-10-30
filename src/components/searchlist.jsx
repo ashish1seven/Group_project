@@ -5,6 +5,7 @@ const Searchlist = () => {
     return (
         <div className=''>
             <Card data={searchData[0]} />        
+            <Card data={searchData[1]} />        
         </div>
     );
 }

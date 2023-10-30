@@ -21,17 +21,25 @@ const Home = () => {
           <Navbar />
           <div className="flex flex-col items-center justify-start w-full h-full font-bold tracking-wide text-white ">
             <div className="mt-40 mb-10 text-6xl text-center">
-            <h1 className="mb-4">Start your group.</h1>
-            <h1 className="mb-5">Connect your vibe.</h1>
-            <p className="text-[28px] mb-5 font-normal">We provide the platform. Just Connect</p>
+              <h1 className="mb-4">Start your group.</h1>
+              <h1 className="mb-5">Connect your vibe.</h1>
+              <p className="text-[28px] mb-5 font-normal">
+                We provide the platform. Just Connect
+              </p>
             </div>
             <div className="flex justify-center">
-            <Link className="border-2 border-[#FF0079] mr-5 w-[150px] text-center p-2 rounded-md font-bold bg-[#FF0079] hover:bg-[#FF0079]/80" to={'/find'}>
-            <button>Discover</button>
-          </Link>
-            <Link className="border-2 p-2 rounded-md text-center w-[150px] font-bold hover:bg-white hover:text-black">
-            <button>Create Group</button>
-          </Link>
+              <Link
+                className="border-2 border-[#FF0079] mr-5 w-[150px] text-center p-2 rounded-md font-bold bg-[#FF0079] hover:bg-[#FF0079]/80"
+                to={"/find"}
+              >
+                <button>Discover</button>
+              </Link>
+              <Link
+                to={`/creategroup`}
+                className="border-2 p-2 rounded-md text-center w-[150px] font-bold hover:bg-white hover:text-black"
+              >
+                <button>Create Group</button>
+              </Link>
             </div>
           </div>
         </div>

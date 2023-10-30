@@ -30,7 +30,7 @@ const Createevents = () => {
             setInVisible(false);
             setUpVisible(true);
           }}
-          className="px-10 py-2 text-white border-4 rounded-xl relative top-[180px] w-80 bg-red-500"
+          className="px-10 py-2 text-white border-4 rounded-xl relative top-[170px] w-80 bg-red-500"
         >
           Get Started for Free
         </button>

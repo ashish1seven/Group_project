@@ -7,7 +7,6 @@ let displayData = searchData;
 function Searchlist({ city }) {
     console.log(city)
   for (let i = 0; i < displayData.length; i++) {
-    
     if (displayData[i].title === city) {
       return (
         <div className="flex flex-wrap m-auto w-[1300px] justify-evenly items-center">

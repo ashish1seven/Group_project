@@ -323,7 +323,106 @@ export const searchData = [
                 description: "Relax, rejuvenate, and embrace wellness practices."
             }
         ]
-    }
+    },
+    {
+        id: "delhi101",
+        title: "delhi",
+        cardSet: [
+            {
+                id: 34,
+                image: "https://example.com/delhi-event1.jpg",
+                date: "11/26/2023",
+                title: "Delhi Street Food Festival",
+                venue: "Jawaharlal Nehru Stadium",
+                organizer: "Delhi Foodie Fest",
+                description: "Savor the diverse street food of Delhi."
+            },
+            {
+                id: 35,
+                image: "https://example.com/delhi-event2.jpg",
+                date: "12/04/2023",
+                title: "Delhi Art and Craft Fair",
+                venue: "Dilli Haat",
+                organizer: "Delhi Artisans Society",
+                description: "Explore exquisite art and crafts from across India."
+            },
+            {
+                id: 36,
+                image: "https://example.com/delhi-event3.jpg",
+                date: "12/16/2023",
+                title: "Qawwali Night at Hazrat Nizamuddin Dargah",
+                venue: "Hazrat Nizamuddin Dargah",
+                organizer: "Delhi Sufi Music Society",
+                description: "Immerse yourself in the soulful sounds of Qawwali."
+            }
+        ]
+    },
+    {
+        id: "trivandrum202",
+        title: "thiruvananthapuram",
+        cardSet: [
+            {
+                id: 37,
+                image: "https://example.com/trivandrum-event1.jpg",
+                date: "11/25/2023",
+                title: "Kerala Folk Dance Festival",
+                venue: "Nishagandhi Open-Air Theater",
+                organizer: "Trivandrum Cultural Society",
+                description: "Experience vibrant folk dances of Kerala."
+            },
+            {
+                id: 38,
+                image: "https://example.com/trivandrum-event2.jpg",
+                date: "12/03/2023",
+                title: "Kovalam Beach Yoga Retreat",
+                venue: "Kovalam Beach",
+                organizer: "Trivandrum Yoga Retreats",
+                description: "Relax, meditate, and practice yoga by the beach."
+            },
+            {
+                id: 39,
+                image: "https://example.com/trivandrum-event3.jpg",
+                date: "12/14/2023",
+                title: "Thiruvananthapuram Spice and Food Expo",
+                venue: "Kanakakunnu Palace Grounds",
+                organizer: "Kerala Culinary Delights",
+                description: "Discover the flavors of Kerala's spices and cuisine."
+            }
+        ]
+    },
+    {
+        id: "patna303",
+        title: "patna",
+        cardSet: [
+            {
+                id: 40,
+                image: "https://example.com/patna-event1.jpg",
+                date: "11/28/2023",
+                title: "Bihar Handicrafts and Handloom Fair",
+                venue: "Gandhi Maidan",
+                organizer: "Patna Craftsmen Association",
+                description: "Explore traditional handicrafts and handlooms of Bihar."
+            },
+            {
+                id: 41,
+                image: "https://example.com/patna-event2.jpg",
+                date: "12/05/2023",
+                title: "Bhojpuri Music Festival",
+                venue: "SK Memorial Hall",
+                organizer: "Patna Music and Culture Society",
+                description: "Celebrate the music and culture of Bhojpuri."
+            },
+            {
+                id: 42,
+                image: "https://example.com/patna-event3.jpg",
+                date: "12/17/2023",
+                title: "Ganga Aarti at Gandhi Ghat",
+                venue: "Gandhi Ghat on River Ganges",
+                organizer: "Patna Spiritual Society",
+                description: "Participate in the evening Ganga Aarti ceremony."
+            }
+        ]
+    },
 ]
 
 

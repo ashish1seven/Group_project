@@ -6,13 +6,19 @@ function Card({ data }) {
   return (
     <div className="flex">
       {data.cardSet.map((v, i) => (
-        <div key={i} className="p-5 m-3 border-2 rounded-lg h-72 w-96">
-          <img src={v.image} className="w-full h-44" alt="" />
-          <h4>{v.date}</h4>
-          <h1>{v.title}</h1>
-          <p>{v.description}</p>
-          <p>{v.venue}</p>
-          <p>{v.organizer}</p>
+        <div key={i} className="m-3 border-2 rounded-lg h-96 w-96">
+          <img src={v.image} className="w-full h-44 rounded-md" alt="" />
+          <div className="p-4 h-40 flex flex-col justify-evenly">
+          <h4 className="text-[#333333] text-sm">{v.date}</h4>
+          <h1 className="font-bold text-2xl">{v.title}</h1>
+          {/* <p>{v.description}</p> */}
+          <p className="text-[#333333] text-sm">{v.organizer} ,{v.venue}</p>
+          </div>
+          <div className="text-xl h-12 flex justify-evenly">
+          <i className="fi fi-br-paper-plane-top"></i>
+          <i className="fi fi-sr-users"></i>
+          <i className="fi fi-br-square-poll-vertical"></i>
+          </div>
         </div>
       ))}
     </div>

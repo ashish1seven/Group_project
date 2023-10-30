@@ -24,7 +24,6 @@ const Createevents = () => {
           The Organizers Platform
         </h1>
         <h2 className="mt-16 text-5xl text-white">
-          {" "}
           Plan, Create, and Organize
         </h2>
         <button

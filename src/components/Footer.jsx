@@ -7,8 +7,11 @@ export default function Footer() {
     <div>
       <footer className="h-[500px] w-full bg-[#1A1831] text-white py-8 px-[170px]">
         <div className="flex items-center mb-5">
-          <p className="font-bold mr-5">Create your own Connect group.</p>
-          <Link className="border-2 p-2 rounded-md font-bold hover:bg-white hover:text-black">
+          <p className="mr-5 font-bold">Create your own Connect group.</p>
+          <Link
+            to={`/creategroup`}
+            className="p-2 font-bold border-2 rounded-md hover:bg-white hover:text-black"
+          >
             <button>Get Started</button>
           </Link>
         </div>
@@ -166,39 +169,47 @@ export default function Footer() {
           </div>
         </div>
         <div className="my-8">
-          <h3 className=" mb-4 text-lg font-medium">Follow us</h3>
-          <div className="w-full flex justify-between">
-          <div className="flex h-10 items-center w-52 justify-between text-xl">
-            <Link>
-              {" "}
-              <i className="fi fi-brands-facebook"></i>
-            </Link>
-            <Link>
-              <i className="fi fi-brands-twitter"></i>
-            </Link>
-            <Link>
-              <i className="fi fi-brands-instagram"></i>
-            </Link>
-            <Link>
-              <i className="fi fi-brands-youtube"></i>
-            </Link>
-          </div>
-          <div className="flex">
-            <Link className="mr-3">
-              <img src={google} alt="" className="h-10 rounded-md " />
-            </Link>
-            <Link>
-              <img src={apple} alt="" className="h-10 rounded-md" />
-            </Link>
-          </div>
+          <h3 className="mb-4 text-lg font-medium ">Follow us</h3>
+          <div className="flex justify-between w-full">
+            <div className="flex items-center justify-between h-10 text-xl w-52">
+              <Link>
+                {" "}
+                <i className="fi fi-brands-facebook"></i>
+              </Link>
+              <Link>
+                <i className="fi fi-brands-twitter"></i>
+              </Link>
+              <Link>
+                <i className="fi fi-brands-instagram"></i>
+              </Link>
+              <Link>
+                <i className="fi fi-brands-youtube"></i>
+              </Link>
+            </div>
+            <div className="flex">
+              <Link className="mr-3">
+                <img src={google} alt="" className="h-10 rounded-md " />
+              </Link>
+              <Link>
+                <img src={apple} alt="" className="h-10 rounded-md" />
+              </Link>
+            </div>
           </div>
         </div>
-        <ul className="flex text-sm w-full h-8 items-center ">
+        <ul className="flex items-center w-full h-8 text-sm ">
           <li className="mr-[30px] text-lg font-bold">&copy; 2023 Connect</li>
-          <Link className="mr-[30px] font-semibold text-[#c4c4c4] hover:text-white"><li>Terms of Service</li></Link>
-          <Link className="mr-[30px] font-semibold text-[#c4c4c4] hover:text-white"><li>Privacy Policy</li></Link>
-          <Link className="mr-[30px] font-semibold text-[#c4c4c4] hover:text-white"><li>Cookie Policy</li></Link>
-          <Link className="font-semibold text-[#c4c4c4] hover:text-white"><li>Help</li></Link>
+          <Link className="mr-[30px] font-semibold text-[#c4c4c4] hover:text-white">
+            <li>Terms of Service</li>
+          </Link>
+          <Link className="mr-[30px] font-semibold text-[#c4c4c4] hover:text-white">
+            <li>Privacy Policy</li>
+          </Link>
+          <Link className="mr-[30px] font-semibold text-[#c4c4c4] hover:text-white">
+            <li>Cookie Policy</li>
+          </Link>
+          <Link className="font-semibold text-[#c4c4c4] hover:text-white">
+            <li>Help</li>
+          </Link>
         </ul>
       </footer>
     </div>

@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/home';
 import Findevents from './pages/findevents';
 import Createevents from './pages/createevents';
+import Creategroup from './pages/Creategroup';
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/find' element={<Findevents />} />
-          <Route path='/create' element={<Createevents />} />
-      </Routes>
+          <Route path='/findevents' element={<Findevents />} />
+          <Route path='/createevents' element={<Createevents />} />
+          <Route path='/creategroup' element={<Creategroup />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );

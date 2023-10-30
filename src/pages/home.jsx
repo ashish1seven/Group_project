@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div className="h-screen w-screen">
+      <div className="w-screen h-screen">
         <div
           className="h-[90vh] w-screen"
           style={{
@@ -19,10 +19,10 @@ const Home = () => {
           }}
         >
           <Navbar />
-          <div className="h-full w-full flex items-center flex-col justify-start text-white font-bold tracking-wide ">
-            <div className="text-6xl text-center mt-40 mb-10">
+          <div className="flex flex-col items-center justify-start w-full h-full font-bold tracking-wide text-white ">
+            <div className="mt-40 mb-10 text-6xl text-center">
             <h1 className="mb-4">Start your group.</h1>
-            <h1 className="mb-5">Meet your tribe.</h1>
+            <h1 className="mb-5">Connect your vibe.</h1>
             <p className="text-[28px] mb-5 font-normal">We provide the platform. Just Connect</p>
             </div>
             <div className="flex justify-center">
@@ -36,7 +36,7 @@ const Home = () => {
           </div>
         </div>
         <div className="h-[400px] mt-10">
-          <h1 className="text-pink-700 text-2xl font-semibold text-center">
+          <h1 className="text-2xl font-semibold text-center text-pink-700">
             Discover Experiences
           </h1>
           <p className="text-center text-[#333333] text-lg mt-5">

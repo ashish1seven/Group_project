@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export default function Creategroup() {
+const Creategroup = () => {
   return (
-    <div>Creategroup</div>
-  )
+    <div>
+      <h1>Create Group</h1>
+    </div>
+  );
 }
+
+export default Creategroup;
+

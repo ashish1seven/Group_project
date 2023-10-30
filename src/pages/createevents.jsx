@@ -20,13 +20,19 @@ const Createevents = () => {
         }}
       >
         <Navbar />
+        <h1 className="mt-12 text-white text-7xl font-['Monteserrat',sans-serif]">
+          The Organizers Platform
+        </h1>
+        <h2 className="mt-16 text-5xl text-white">
+          Plan, Create, and Organize
+        </h2>
         <button
           onClick={() => {
             setShow(!show);
             setInVisible(false);
             setUpVisible(true);
           }}
-          className="px-10 py-2 text-white border-4 rounded-xl relative top-[240px] w-80 bg-red-500"
+          className="px-10 py-2 text-white border-4 rounded-xl relative top-[170px] w-80 bg-red-500"
         >
           Get Started for Free
         </button>

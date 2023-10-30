@@ -23,6 +23,20 @@ code {
     monospace;
 }
 
+::-webkit-scrollbar{
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(200, 198, 198, 0.8);
+  border: none;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track{
+  border: none;
+  border-radius: 9999px;
+}
 /* #modal {
   transition: all 5s ease-out;
   position: absolute;

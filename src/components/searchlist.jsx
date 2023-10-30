@@ -6,9 +6,8 @@ const Searchlist = () => {
         <div className=''>
             <Card data={searchData[0]} />        
             <Card data={searchData[1]} />        
-            <Card data={searchData[2]} />        
         </div>
-    );
-}
+      );
+    }
 
 export default Searchlist;

@@ -4,7 +4,7 @@ import { searchData } from "../data";
 
 let displayData = searchData;
 
-function Searchlist({ city, setCity }) {
+function Searchlist({ city }) {
     console.log(city)
   for (let i = 0; i < displayData.length; i++) {
     

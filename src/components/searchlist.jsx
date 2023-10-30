@@ -10,16 +10,8 @@ function Searchlist({ city, setCity }) {
     
     if (displayData[i].title === city) {
       return (
-        <div className="flex flex-wrap m-6 w-[1200px] flex-row">
-          <Card data={searchData[i]} />
-import React from 'react';
-import Card from './card';
-import  {searchData} from '../data';
-const Searchlist = () => {
-    return (
-        <div className=''>
-            <Card data={searchData[0]} />        
-            <Card data={searchData[1]} />        
+        <div className="flex flex-wrap m-auto w-[1300px] justify-evenly items-center">
+          <Card data={searchData[i]} />       
         </div>
       );
     }

@@ -4,7 +4,7 @@ function Card({ data }) {
   // console.log(data.cardSet[0])
   
   return (
-    <div className="flex justify-center flex-wrap">
+    <div className="flex flex-wrap items-center justify-between w-full">
       {data.cardSet.map((v, i) => (
         <div key={i} className="m-3 border-2 rounded-lg h-96 w-96">
           <img src={v.image} className="w-full rounded-md h-44" alt="" />

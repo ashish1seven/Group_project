@@ -5,6 +5,7 @@ import Home from './pages/home';
 import Findevents from './pages/findevents';
 import Createevents from './pages/createevents';
 import Creategroup from './pages/Creategroup';
+import Steps from './pages/Steps';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/findevents' element={<Findevents />} />
           <Route path='/createevents' element={<Createevents />} />
           <Route path='/creategroup' element={<Creategroup />} />
+          <Route path='/start' element={<Steps />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

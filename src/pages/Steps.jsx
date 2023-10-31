@@ -9,7 +9,6 @@ export default function Steps() {
   const [step, setStep] = useState(0);
   const [inputValue, setInputValue] = useState("");
   const [textareaValue, setTextareaValue] = useState("");
-//   let history = useHistory();
 
 
   const update_score = () => {

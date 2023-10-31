@@ -16,7 +16,7 @@ function App() {
           <Route path='/findevents' element={<Findevents />} />
           <Route path='/createevents' element={<Createevents />} />
           <Route path='/creategroup' element={<Creategroup />} />
-          <Route path='/start' element={<Steps />}></Route>
+          <Route path='/start' element={<Steps />} />
         </Routes>
       </BrowserRouter>
     </div>

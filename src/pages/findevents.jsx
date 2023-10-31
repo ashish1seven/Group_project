@@ -97,7 +97,7 @@ const Findevents = () => {
         </p> 
       </div>
       <div>
-        <Searchlist city={city} />
+        <Searchlist city={city.toLowerCase()} />
       </div>
 
       <div>

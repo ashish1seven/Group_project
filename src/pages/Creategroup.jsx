@@ -8,7 +8,6 @@ import offset from "../Images/offset.png";
 import google from "../Images/downloadGoogle.svg";
 import apple from "../Images/downloadApple.svg";
 import Logo from "../Images/Favicon.png";
-import Navbar from "../components/navbar";
 const benefits = [
   {
     id : 1,

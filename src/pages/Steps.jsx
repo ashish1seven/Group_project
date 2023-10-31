@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../Images/Favicon.png";
-import { useHistory } from "react-router-dom";
 import { steps } from "../steps";
 
 export default function Steps() {
@@ -10,7 +9,6 @@ export default function Steps() {
   const [step, setStep] = useState(0);
   const [inputValue, setInputValue] = useState("");
   const [textareaValue, setTextareaValue] = useState("");
-//   let history = useHistory();
 
 
   const update_score = () => {

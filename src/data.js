@@ -34,69 +34,69 @@ export const searchData = [
         ]
     },
     {
-        id: "abc123b",
-        title: "bilaspur",
-        cardSet: [
-            {
-                id: 7,
-                image: "https://img.freepik.com/free-vector/stand-up-comedy-banner-with-red-curtains-background_1308-80995.jpg?size=626&ext=jpg&ga=GA1.2.386372595.1697587200&semt=ais",
-                date: "12/11/2023",
-                title: "stand up by akash ",
-                venue: "nehru chowk",
-                organizer: "startup restaurant",
-                description: "This is a stand up comedy",
-            },
-            {
-                id: 8,
-                image: "https://img.freepik.com/free-vector/stand-up-comedy-banner-with-red-curtains-background_1308-80995.jpg?size=626&ext=jpg&ga=GA1.2.386372595.1697587200&semt=ais",
-                date: "23/11/2023",
-                title: "Football",
-                venue: "nagar maidan",
-                organizer: "Rao Group",
-                description: "This is a football game.",
-            },
-            {
-                id: 9,
-                image: "https://img.freepik.com/free-vector/stand-up-comedy-banner-with-red-curtains-background_1308-80995.jpg?size=626&ext=jpg&ga=GA1.2.386372595.1697587200&semt=ais",
-                date: "12/12/2023",
-                title: "Cocktail",
-                venue: "koramangala",
-                organizer: "Cocktail Cafe",
-                description: "free cocktails",
-            },
-        ]
-    },
-    {
-        id: "abc123c",
+        id: "goa404",
         title: "goa",
         cardSet: [
             {
-                id: 10,
-                image: "https://img.freepik.com/free-vector/stand-up-comedy-banner-with-red-curtains-background_1308-80995.jpg?size=626&ext=jpg&ga=GA1.2.386372595.1697587200&semt=ais",
-                date: "12/11/2023",
-                title: "stand up by akash ",
-                venue: "hell",
-                organizer: "startup restaurant",
-                description: "This is a stand up comedy",
+                id: 43,
+                image: "https://example.com/goa-event1.jpg",
+                date: "11/27/2023",
+                title: "Goa Beach Music Festival",
+                venue: "Baga Beach",
+                organizer: "Goa Music and Beach Fest",
+                description: "Enjoy music and dance by the beach."
             },
             {
-                id: 11,
-                image: "https://img.freepik.com/free-vector/stand-up-comedy-banner-with-red-curtains-background_1308-80995.jpg?size=626&ext=jpg&ga=GA1.2.386372595.1697587200&semt=ais",
-                date: "23/11/2023",
-                title: "Football",
-                venue: "nagar maidan",
-                organizer: "Rao Group",
-                description: "This is a football game.",
+                id: 44,
+                image: "https://example.com/goa-event2.jpg",
+                date: "12/06/2023",
+                title: "Goa Food and Wine Expo",
+                venue: "Candolim Beach",
+                organizer: "Goa Food and Wine Enthusiasts",
+                description: "Indulge in delectable cuisine and fine wines."
             },
             {
-                id: 12,
-                image: "https://img.freepik.com/free-vector/stand-up-comedy-banner-with-red-curtains-background_1308-80995.jpg?size=626&ext=jpg&ga=GA1.2.386372595.1697587200&semt=ais",
-                date: "12/12/2023",
-                title: "Cocktail",
-                venue: "koramangala",
-                organizer: "Cocktail Cafe",
-                description: "free cocktails",
+                id: 45,
+                image: "https://example.com/goa-event3.jpg",
+                date: "12/18/2023",
+                title: "Anjuna Flea Market",
+                venue: "Anjuna Beach",
+                organizer: "Goa Flea Market Collective",
+                description: "Shop for unique and handmade goods."
+            }
+        ]
+    },
+    {
+        id: "bilaspur101",
+        title: "bilaspur",
+        cardSet: [
+            {
+                id: 46,
+                image: "https://example.com/bilaspur-event1.jpg",
+                date: "11/30/2023",
+                title: "Chhattisgarh Cultural Festival",
+                venue: "Kanan Pendari Park",
+                organizer: "Bilaspur Cultural Society",
+                description: "Experience the diverse culture of Chhattisgarh."
             },
+            {
+                id: 47,
+                image: "https://example.com/bilaspur-event2.jpg",
+                date: "12/07/2023",
+                title: "Bilaspur Food Truck Festival",
+                venue: "Bilaspur City Park",
+                organizer: "Bilaspur Foodie Fest",
+                description: "Delight in a variety of food trucks and cuisine."
+            },
+            {
+                id: 48,
+                image: "https://example.com/bilaspur-event3.jpg",
+                date: "12/19/2023",
+                title: "Raipur-Bilaspur Bike Rally",
+                venue: "Bilaspur Sports Complex",
+                organizer: "Chhattisgarh Bikers Club",
+                description: "Join a thrilling bike rally between Raipur and Bilaspur."
+            }
         ]
     },
     {

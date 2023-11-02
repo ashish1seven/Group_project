@@ -30,7 +30,7 @@ const Home = () => {
             <div className="flex justify-center">
               <Link
                 className="border-2 border-[#FF0079] mr-5 w-[150px] text-center p-2 rounded-md font-bold bg-[#FF0079] hover:bg-[#FF0079]/80"
-                to={"/find"}
+                to={"/findevents"}
               >
                 <button>Discover</button>
               </Link>

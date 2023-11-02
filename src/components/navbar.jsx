@@ -13,6 +13,7 @@ const Navbar = () => {
   
   const toggleInput = () => {
     setIsExpanded(!isExpanded);
+      console.log(isExpanded)
   };
 
   const toggleDropdown = () => {
@@ -28,13 +29,9 @@ const Navbar = () => {
       <nav className="flex items-center justify-between w-screen h-16 px-10 text-white bg-transparent ">
         <Link
           className="relative flex px-6 py-1 text-lg font-bold duration-500 hover:scale-110"
-          to={'/'}
+          to={"/"}
         >
-          <img
-            src={Logo}
-            alt=""
-            className="h-12"
-          />
+          <img src={Logo} alt="" className="h-12" />
         </Link>
         <div className="flex ">
           <button
@@ -44,33 +41,33 @@ const Navbar = () => {
           >
             <i className="fi fi-br-search"></i>
           </button>
-          {isExpanded && (
-            <input
-              className="pl-1 ml-1 text-white duration-500 ease-linear border-none rounded outline-none bg-gray-400/20"
-              type="text"
-              placeholder="Search Events"
-              autoFocus
-              onBlur={toggleInput}
-            />
-          )}
+          <input
+            className={`pl-1 ml-1 text-white duration-500 ease-linear border-none rounded outline-none bg-gray-400/20 ${
+              isExpanded ? "input-expanded" : "input-animation"
+            }`}
+            type="text"
+            placeholder="Search Events"
+          />
         </div>
 
         <div className="relative flex items-center">
           <Link
             className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110"
-             to={`/findevents`}
+            to={`/findevents`}
           >
             Discover
           </Link>
-          <div onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown} className='relative'>
+          <div
+            onMouseEnter={toggleDropdown}
+            onMouseLeave={closeDropdown}
+            className="relative"
+          >
             <button
               className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110"
               href=""
               id="create-event"
             >
-              <Link to={`/createevents`}>
-                Create Event
-                </Link>
+              <Link to={`/createevents`}>Create Event</Link>
             </button>
             {isDropdownVisible && (
               <div

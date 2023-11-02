@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../Images/Favicon.png";
 import { steps } from "../steps";
+import { useDarkMode } from "../darkmodecontext";
 
 export default function Steps() {
   const [count, setCount] = useState(1);
@@ -9,7 +10,7 @@ export default function Steps() {
   const [step, setStep] = useState(0);
   const [inputValue, setInputValue] = useState("");
   const [textareaValue, setTextareaValue] = useState("");
-
+  const { darkMode } = useDarkMode();
 
   const update_score = () => {
     if (count < total) {
@@ -36,98 +37,115 @@ export default function Steps() {
     }
   };
   const isNextButtonEnabled = inputValue.trim() !== "" || textareaValue.trim() !== "";
+  
+  
   return (
-    <>
-      <nav className="flex items-center justify-between w-screen h-20 p-10">
-        <div className="flex items-center font-bold text-[#FF0079] text-3xl">
-          <span>CO </span>
-          <img src={logo} alt="" className="h-16" /> <span>ECT</span>
-        </div>
-        <span className="text-sm text-black hover:font-semibold">
-          Save and exit
-        </span>
-      </nav>
-      <div className="mb-10">
-        <div className="w-full h-4 mb-5 bg-gray-300">
-          <div
-            className="h-full bg-blue-400"
-            style={{ width: width + "%" }}
-          ></div>
-        </div>
-        <h2 className="text-sm text-center text-gray-400">
-          STEP {count} OF {total}
-        </h2>
-      </div>
-
-      <section className="px-24 py-14">
-        <button className="w-[150px] text-white text-center p-2 rounded-md font-bold bg-[#FF0079] mb-5"  onClick={prev_step}>Back</button>
-        <div className="flex justify-between w-full">
-        <div className=" w-[60%] ">
-          <h1 className="mb-5 text-3xl font-bold">{steps && steps[step].title ? steps[step].title : ""}</h1>
-          <p className="mb-5 text-lg ">{steps && steps[step].desc}</p>
-          {steps[step].type ? (
-            <input className="outline-none p-3 w-[500px] rounded-lg border-black border-[1px] mb-7"
-              type={steps[step].type}
-              placeholder={steps[step].placeholder} value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)} required
-            />
-          ) : (
-            " "
-          )}
-          {steps[step].text ? (
-            
-              <textarea
-              className="border-[1px] border-black outline-none rounded-lg p-2 mb-5"
-                name=""
-                id=""
-                placeholder={steps[step].inside}
-                cols="40"
-                rows="7"
-                required value={textareaValue}
-                onChange={(e) => setTextareaValue(e.target.value)}
-              ></textarea>
-            
-          ) : (
-            ""
-          )}
-           <div className="grid grid-cols-4 gap-1 mb-5 ">
-           {
-            steps[step].categories?.map(v =>{
-                return(
-                   
-                        <button className="text-center text-sm p-[2px] text-[#00798a] font-bold border-[#00798a] border rounded-lg">{v}</button>
-                    
-                )
-            })
-          }
-           </div>
-          
-        </div>
-        <div className="bg-blue-100/40 h-[200px] w-[350px] rounded-lg p-3">
-          <div className="flex items-center mb-2">
-          <img src="https://www.meetup.com/mu_static/en-US/lightning-bolt.3d154729.svg" alt="" />
-          <h1 className="ml-3 font-semibold ">Tips</h1>
+    <div className={`${darkMode ? "dark" : ""}`}>
+      <div>
+        <nav className="flex items-center justify-between w-screen h-20 p-10">
+          <div className="flex items-center font-bold text-[#FF0079] text-3xl">
+            <span>CO </span>
+            <img src={logo} alt="" className="h-16" /> <span>ECT</span>
           </div>
-          {steps[step].tip ? (
-            <p className="text-lg">{steps[step].tip}</p>
-          ) : (
-            <div className="p-2 text-lg">
-              <p className="mb-2">Questions to consider:</p>
-              <ul className="ml-3 list-disc">
-                <li>What's the group goal?</li>
-                <li>Who are you hoping to meet?</li>
-                <li>What will you do at your events?</li>
-              </ul>
+          <span className="text-sm text-black hover:font-semibold">
+            Save and exit
+          </span>
+        </nav>
+        <div className="mb-10">
+          <div className="w-full h-4 mb-5 bg-gray-300">
+            <div
+              className="h-full bg-blue-400"
+              style={{ width: width + "%" }}
+            ></div>
+          </div>
+          <h2 className="text-sm text-center text-gray-400">
+            STEP {count} OF {total}
+          </h2>
+        </div>
+
+        <section className="px-24 py-14">
+          <button
+            className="w-[150px] text-white text-center p-2 rounded-md font-bold bg-[#FF0079] mb-5"
+            onClick={prev_step}
+          >
+            Back
+          </button>
+          <div className="flex justify-between w-full">
+            <div className=" w-[60%] ">
+              <h1 className="mb-5 text-3xl font-bold">
+                {steps && steps[step].title ? steps[step].title : ""}
+              </h1>
+              <p className="mb-5 text-lg ">{steps && steps[step].desc}</p>
+              {steps[step].type ? (
+                <input
+                  className="outline-none p-3 w-[500px] rounded-lg border-black border-[1px] mb-7"
+                  type={steps[step].type}
+                  placeholder={steps[step].placeholder}
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  required
+                />
+              ) : (
+                " "
+              )}
+              {steps[step].text ? (
+                <textarea
+                  className="border-[1px] border-black outline-none rounded-lg p-2 mb-5"
+                  name=""
+                  id=""
+                  placeholder={steps[step].inside}
+                  cols="40"
+                  rows="7"
+                  required
+                  value={textareaValue}
+                  onChange={(e) => setTextareaValue(e.target.value)}
+                ></textarea>
+              ) : (
+                ""
+              )}
+              <div className="grid grid-cols-4 gap-1 mb-5 ">
+                {steps[step].categories?.map((v) => {
+                  return (
+                    <button className="text-center text-sm p-[2px] text-[#00798a] font-bold border-[#00798a] border rounded-lg">
+                      {v}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          )}
-        </div>
-        </div>
-        <button
-          className={`w-[150px] text-white text-center p-2 rounded-md font-bold ${isNextButtonEnabled ? 'bg-[#FF0079]' : 'bg-gray-400'} `}
-          onClick={update_score}
-          disabled={!isNextButtonEnabled}
-        >Next</button>
-      </section>
-    </>
+            <div className="bg-blue-100/40 h-[200px] w-[350px] rounded-lg p-3">
+              <div className="flex items-center mb-2">
+                <img
+                  src="https://www.meetup.com/mu_static/en-US/lightning-bolt.3d154729.svg"
+                  alt=""
+                />
+                <h1 className="ml-3 font-semibold ">Tips</h1>
+              </div>
+              {steps[step].tip ? (
+                <p className="text-lg">{steps[step].tip}</p>
+              ) : (
+                <div className="p-2 text-lg">
+                  <p className="mb-2">Questions to consider:</p>
+                  <ul className="ml-3 list-disc">
+                    <li>What's the group goal?</li>
+                    <li>Who are you hoping to meet?</li>
+                    <li>What will you do at your events?</li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+          <button
+            className={`w-[150px] text-white text-center p-2 rounded-md font-bold ${
+              isNextButtonEnabled ? "bg-[#FF0079]" : "bg-gray-400"
+            } `}
+            onClick={update_score}
+            disabled={!isNextButtonEnabled}
+          >
+            Next
+          </button>
+        </section>
+      </div>
+    </div>
   );
 }

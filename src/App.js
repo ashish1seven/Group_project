@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
@@ -8,8 +8,10 @@ import Creategroup from './pages/Creategroup';
 import Steps from './pages/Steps';
 
 function App() {
+  
+
   return (
-    <div className="w-screen">
+    <div className={`w-screen `}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />

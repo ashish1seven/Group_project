@@ -1,7 +1,8 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination} from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
+import { useDarkMode } from "../darkmodecontext";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -108,32 +109,29 @@ const categories = [
   
 ]
 export default function Categories() {
+  const { darkMode } = useDarkMode();
   return (
-    <Swiper
-      modules={[Navigation]}
-      spaceBetween={50}
-      slidesPerView={4}
-      navigation={true}
-      rewind = {true}
-      className=" h-52 my-8  text-[#FF0079]"
-      
-    >
-      {categories.map((item)=>(
-       <div className="h-56 w-full">
-         <SwiperSlide key={item.id}>
-          <div className="h-44 w-58 shadow-2xl p-4 justify-center flex flex-col rounded-lg items-center bg-gray-300/20 ">
-         <img
-             src={item.img}
-             alt=""
-             className="h-24 mb-3"
-           />
-            <h2 className="text-lg font-semibold">{item.name}</h2>
+    <div className={`${darkMode ? "dark" : ""}`}>
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={50}
+        slidesPerView={4}
+        navigation={true}
+        rewind={true}
+        className={` h-52 my-8  text-[#FF0079] dark:bg-slate-900 `}
+      >
+        {categories.map((item) => (
+          <div className="w-full h-56">
+            <SwiperSlide key={item.id}>
+              <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-2xl h-44 w-58 bg-gray-300/20 ">
+                <img src={item.img} alt="" className="h-24 mb-3" />
+                <h2 className="text-lg font-semibold">{item.name}</h2>
+              </div>
+            </SwiperSlide>
           </div>
-        </SwiperSlide>
-       </div>
-      )
-      )}
-    </Swiper>
+        ))}
+      </Swiper>
+    </div>
   );
   }
 

@@ -1,11 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
-
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
 
 body {
@@ -38,17 +37,7 @@ code {
   border-radius: 9999px;
 }
 
-.input-animation {
-  max-width: 0;
-  opacity: 0;
-  transition: max-width 1s ease, opacity 1s ease;
-}
 
-.input-expanded {
-  max-width: 200px;
-  opacity: 1;
-  transition: max-width 1s ease, opacity 1s ease;
-}
 /* #modal {
   transition: all 5s ease-out;
   position: absolute;

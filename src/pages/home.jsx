@@ -40,7 +40,7 @@ const Home = () => {
                 </Link>
                 <Link
                   to={`/creategroup`}
-                  className="border-2 p-2 rounded-md text-center w-[150px] font-bold hover:bg-white hover:text-black dark:text-black dark:border-black"
+                  className="border-2 p-2 rounded-md text-center w-[150px] font-bold hover:bg-white hover:text-black dark:text-black dark:border-black dark:hover:text-white dark:hover:bg-black"
                 >
                   <button>Create Group</button>
                 </Link>

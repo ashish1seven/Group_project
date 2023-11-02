@@ -42,7 +42,7 @@ const Navbar = () => {
         </Link>
         <div className="flex ">
           <button
-            className="px-2 py-1 mx-1 text-white bg-transparent rounded dark:text-slate-900"
+            className="px-2 py-1 mx-1 text-white bg-transparent rounded "
             href=""
             onClick={toggleInput}
           >
@@ -59,7 +59,7 @@ const Navbar = () => {
 
         <div className="relative flex items-center">
           <Link
-            className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110 dark:text-slate-900"
+            className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110 "
             to={`/findevents`}
           >
             Discover
@@ -70,7 +70,7 @@ const Navbar = () => {
             className="relative"
           >
             <button
-              className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110 dark:text-slate-900"
+              className="px-5 py-1 mx-3 font-semibold text-white duration-500 rounded hover:scale-110 "
               id="create-event"
             >
               <Link to={`/createevents`}>Create Event</Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
               setInVisible(true);
               setUpVisible(false);
             }}
-            className="px-5 py-1 mx-2 font-semibold text-white duration-500 border rounded hover:scale-110 dark:text-slate-900"
+            className="px-5 py-1 mx-2 font-semibold text-white duration-500 border rounded hover:scale-110 "
           >
             Log In
           </button>
@@ -102,7 +102,7 @@ const Navbar = () => {
               setInVisible(false);
               setUpVisible(true);
             }}
-            className="px-5 py-1 mx-2 font-medium duration-500 bg-pink-600 border rounded text-slate-100 hover:scale-110 dark:text-slate-900"
+            className="px-5 py-1 mx-2 font-medium duration-500 bg-pink-600 border rounded text-slate-100 hover:scale-110 "
           >
             Sign Up
           </button>

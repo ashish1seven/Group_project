@@ -42,7 +42,7 @@ const Navbar = () => {
         </Link>
         <div className="flex ">
           <button
-            className="px-2 py-1 mx-1 text-white bg-transparent rounded "
+            className="px-2 py-1 mx-1 text-white bg-transparent rounded dark:text-black dark:bg-slate-800"
             href=""
             onClick={toggleInput}
           >

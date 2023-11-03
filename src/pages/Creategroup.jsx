@@ -87,7 +87,7 @@ const Creategroup = () => {
           </p>
           <Link
             className="border-2 text-white border-[#FF0079] mr-5 w-[150px] text-center p-2 rounded-md font-bold bg-[#FF0079] hover:bg-[#FF0079]/80"
-            to={"/start"}
+            to={"/start/city"}
             target="_blank"
           >
             <button>Start a group</button>
@@ -111,7 +111,7 @@ const Creategroup = () => {
                   </h1>
                   <p className="text-sm text-center"> {item.description} </p>
                   <Link
-                    to={"/start"}
+                    to={"/start/city"}
                     target="_blank"
                     className="text-[#FF0079] font-semibold text-sm"
                   >
@@ -167,7 +167,7 @@ const Creategroup = () => {
             </p>
             <Link
               className="border-2 text-white border-[#FF0079] mr-5 w-[150px] text-center p-2 rounded-md font-bold bg-[#FF0079] hover:bg-[#FF0079]/80"
-              to={"/start"}
+              to={"/start/city"}
               target="_blank"
             >
               <button>Start today</button>

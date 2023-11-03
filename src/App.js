@@ -6,6 +6,7 @@ import Findevents from './pages/findevents';
 import Createevents from './pages/createevents';
 import Creategroup from './pages/Creategroup';
 import Steps from './pages/Steps';
+// import City from './pages/City';
 
 function App() {
   

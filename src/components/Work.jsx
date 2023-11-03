@@ -9,11 +9,11 @@ export default function Work() {
   const { darkMode } = useDarkMode();
   return (
     <>
-      <div className={`${darkMode ? "dark" : ""}`}>
+      <div className={`${darkMode ? "dark" : ""} h-full w-full px-[140px] mb-10`}>
         <div
-          className={`h-full w-[100%] px-[140px] flex flex-col justify-evenly  `}
+          className='h-full w-full px-[140px] flex flex-col  justify-evenly dark:text-white' 
         >
-          <div className="flex items-center justify-center w-[100%] ">
+          <div className="flex items-center justify-center w-full ">
             <img src={schedule} alt="" className="mr-10 h-28" />
             <div className="flex flex-col items-start">
               <h1 className="text-[#FF0079] text-2xl font-medium">

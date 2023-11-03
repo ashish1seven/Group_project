@@ -8,106 +8,94 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import arts from '../Images/id-1.png'
-import car from '../Images/id-2.png'
-import edu from '../Images/id-3.png'
-import fitness from '../Images/id-4.png'
-import food from '../Images/id-5.png'
-import hobbies from '../Images/id-6.png'
-import movie from '../Images/id-7.png'
-import music from '../Images/id-8.png'
-import adventure from '../Images/id-9.png'
-import family from '../Images/id-10.png'
-import pet from '../Images/id-11.png'
-import photo from '../Images/id-12.png'
-import religion from '../Images/id-13.png'
-import sport from '../Images/id-14.png'
-import tech from '../Images/id-15.png'
-import more from '../Images/id-16.png'
 
 const categories = [
   {
     id : 1,
     name: 'Arts and Hobbies',
-    img: arts
+    icon : <i className="fi fi-rs-palette text-4xl text-pink-700"></i>,
+  
   },
   {
     id : 2,
     name: 'Cars & Motorcycles',
-    img: car
+    icon : <i class="fi fi-rr-car-rear text-4xl text-pink-700"></i>,
+  
   },
   {
     id : 3,
     name: 'Education and Training',
-    img: edu
+    icon: <i class="fi fi-rr-book-open-reader text-4xl text-pink-700"></i>,
+   
   },
   {
     id:4,
     name:'Fitness and Wellness',
-    img: fitness
+    icon : <i class="fi fi-rs-gym text-4xl text-pink-700"></i>
   },
   {
     id:5,
     name:'Food & Drink',
-    img: food
+    icon : <i class="fi fi-rs-hamburger-soda text-4xl text-pink-700"></i>
   },
   {
     id:6,
     name:'Hobbies & Crafts',
-    img: hobbies
+    icon : <i class="fi fi-rs-resources text-4xl text-pink-700"></i>
   },
   {
     id:7,
     name:'Movies',
-    img: movie
+    icon: <i class="fi fi-rs-camera-movie text-4xl text-pink-700"></i>
   },
   {
     id:8,
     name:'Music',
-    img: music
+    icon:<i class="fi fi-rs-user-music text-4xl text-pink-700"></i>
   },
   {
     id:9,
     name:'Outdoors & Adventure',
-    img: adventure
+    icon:<i class="fi fi-rs-hiking text-4xl text-pink-700"></i>
   },
   {
     id:10,
     name:'Parents & Family',
-    img: family
+    icon:<i class="fi fi-rs-family text-4xl text-pink-700"></i>
   },
   {
     id:11,
     name:'Pets & Animals',
-    img: pet
+    icon:<i class="fi fi-rs-paw text-4xl text-pink-700"></i>
   },
   {
     id:12,
     name:'Photography',
-    img: photo
+    icon:<i class="fi fi-rr-camera text-4xl text-pink-700"></i>
   },
   {
     id:13,
     name:'Religion & Beliefs',
-    img: religion
+    icon:<i class="fi fi-rs-person-praying text-4xl text-pink-700"></i>
   },
   {
     id:14,
     name:'Sports & Recreation',
-    img: sport
+    icon:<i class="fi fi-rr-basketball text-4xl text-pink-700"></i>
   },
   {
     id:15,
     name:'Technology',
-    img: tech
+    icon:<i class="fi fi-rs-laptop-code text-4xl text-pink-700"></i>
   },
   {
     id:16,
     name:'& More!',
-    img: more
+    icon:<i class="fi fi-br-square-plus text-4xl text-pink-700"></i>
   },
   
 ]
+
 export default function Categories() {
   const { darkMode } = useDarkMode();
   return (
@@ -118,14 +106,14 @@ export default function Categories() {
         slidesPerView={4}
         navigation={true}
         rewind={true}
-        className={` h-52 my-8  text-[#FF0079] dark:bg-slate-900 `}
+        className={` h-52 my-8   dark:bg-slate-900 `}
       >
         {categories.map((item) => (
           <div className="w-full h-56">
             <SwiperSlide key={item.id}>
               <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-2xl h-44 w-58 bg-gray-300/20 ">
-                <img src={item.img} alt="" className="h-24 mb-3" />
-                <h2 className="text-lg font-semibold">{item.name}</h2>
+                <span>{item.icon}</span>
+                <h2 className="text-lg font-semibold text-black/70 dark:text-white">{item.name}</h2>
               </div>
             </SwiperSlide>
           </div>

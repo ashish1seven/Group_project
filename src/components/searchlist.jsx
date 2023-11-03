@@ -3,19 +3,25 @@ import Card from "./card";
 import { searchData } from "../data";
 import { useDarkMode } from "../darkmodecontext";
 
-let displayData = searchData;
 
-function Searchlist({ city }) {
+const displayData = searchData;
+
+function Searchlist({ city, category }) {
   const { darkMode } = useDarkMode();
-  const matchingData = displayData.find(data => data.title.toLowerCase() === city.toLowerCase());
-
+  const matchingData = displayData.find(
+    (data) => data.title.toLowerCase() === city.toLowerCase()
+  );
+console.log(matchingData);
   if (matchingData) {
     return (
-      <div className={`${darkMode ? "dark" : ""}`}>
-        <div className="flex flex-wrap m-auto w-[1300px] justify-evenly items-center dark:bg-slate-900 mb-5">
-          <Card data={matchingData} />
+      <>
+        
+        <div className={`${darkMode ? "dark" : ""}`}>
+          <div className="flex flex-wrap m-auto w-[1300px] justify-evenly items-center dark:bg-slate-900 mb-5">
+            <Card data={matchingData} />
+          </div>
         </div>
-      </div>
+      </>
     );
   } else {
     return (

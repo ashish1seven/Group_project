@@ -7,9 +7,9 @@ import { DarkModeProvider } from './darkmodecontext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <DarkModeProvider><App /></DarkModeProvider>
-    
-  
+  <DarkModeProvider>
+    <App />
+  </DarkModeProvider>
 );
 
 
